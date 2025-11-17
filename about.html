@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — TechFest 2025</title>
+  <meta name="description" content="About TechFest 2025 — mission, history, organizers, tracks, speakers, venue, code of conduct, FAQs, sponsorship and contact details." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --black:#0a0a0a; --card:#121212; --yellow:#facc15; --red:#ef4444; --muted:#a3a3a3; --radius:14px;
+      --container:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Poppins,system-ui,Arial; background:linear-gradient(180deg,#070707 0%, #0f0f0f 100%); color:#fff; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{max-width:var(--container); margin:28px auto; padding:20px}
+
+    /* top nav (small) */
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-size:1.4rem;font-weight:700;color:var(--yellow)}
+    .back-link{color:var(--muted);text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px}
+    .back-link:hover{color:var(--yellow)}
+
+    /* header */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:18px}
+    .hero .intro h1{font-size:2.4rem;margin:0 0 8px;color:var(--yellow)}
+    .hero .intro p.lead{margin:0;color:var(--muted);line-height:1.6}
+    .card-stats{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+    .stats-grid{display:flex;gap:12px;flex-wrap:wrap}
+    .stat{flex:1;min-width:110px;text-align:center}
+    .stat h3{margin:0;color:var(--yellow);font-size:1.4rem}
+    .stat p{margin:6px 0 0;color:var(--muted)}
+
+    /* main sections */
+    .sections{margin-top:26px;display:grid;gap:22px}
+    .panel{background:var(--card);border-radius:12px;padding:22px;border:1px solid rgba(255,255,255,0.03)}
+    .panel h2{margin:0 0 12px;color:var(--yellow)}
+    .panel p{color:var(--muted);line-height:1.65}
+
+    /* timeline */
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .tl-item{display:flex;gap:14px;align-items:flex-start}
+    .dot{width:12px;height:12px;border-radius:50%;background:var(--red);flex:0 0 12px;margin-top:6px}
+    .tl-body{flex:1}
+    .tl-body h4{margin:0 0 6px;color:#fff}
+    .tl-body p{margin:0;color:var(--muted)}
+
+    /* tracks grid */
+    .tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+    .track{padding:14px;border-radius:10px;background:rgba(255,255,255,0.02);border-left:4px solid var(--yellow)}
+    .track h4{margin:0 0 6px}
+    .track p{color:var(--muted);margin:0}
+
+    /* speakers */
+    .speakers{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:12px}
+    .speaker{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;text-align:center}
+    .avatar{width:86px;height:86px;border-radius:10px;object-fit:cover;margin:0 auto 10px;display:block;border:2px solid rgba(255,255,255,0.04)}
+    .speaker h5{margin:6px 0 2px}
+    .speaker p{margin:0;color:var(--muted);font-size:.95rem}
+
+    /* FAQ grid */
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .faq{padding:12px;border-radius:10px;background:rgba(255,255,255,0.01)}
+    .faq summary{cursor:pointer;color:var(--yellow);font-weight:600}
+    .faq p{color:var(--muted);margin-top:8px}
+
+    /* sponsors */
+    .sponsors{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .sponsor{background:#0e0e0e;padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+
+    /* contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:16px}
+    .contact-card{background:rgba(255,255,255,0.02);padding:16px;border-radius:10px}
+
+    /* footer small */
+    .small{color:var(--muted);font-size:.95rem}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .faq-grid{grid-template-columns:1fr}
+    }
+
+    @media (max-width:520px){
+      .wrap{padding:12px}
+      .hero .intro h1{font-size:1.6rem}
+      .stat h3{font-size:1.1rem}
+    }
+
+    /* accessible focus styles */
+    a:focus, button:focus, summary:focus{outline:3px solid rgba(250,204,21,0.25);outline-offset:3px}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">TechFest <span style="color:var(--red)">2025</span></div>
+      <a class="back-link" href="index.html">← Back to Home</a>
+    </div>
+
+    <header class="hero">
+      <div class="intro">
+        <h1>About TechFest 2025</h1>
+        <p class="lead">TechFest 2025 is a three-day interdisciplinary festival that celebrates technology, creativity, and community. We bring together students, professionals, startups, and educators to explore innovations across software, hardware, design, and entrepreneurship.</p>
+
+        <div style="margin-top:14px" class="small">
+          <strong>When:</strong> 20–22 December 2025 &nbsp; • &nbsp; <strong>Where:</strong> MIT Meerut Engineering Campus, Uttar Pradesh
+        </div>
+      </div>
+
+      <aside class="card-stats">
+        <div class="stats-grid">
+          <div class="stat"><h3>3 Days</h3><p>Workshops & Events</p></div>
+          <div class="stat"><h3>20+ Tracks</h3><p>Technical & Cultural</p></div>
+          <div class="stat"><h3>50+ Speakers</h3><p>Experts & Mentors</p></div>
+        </div>
+        <div style="margin-top:12px" class="small">Organized by the Computer Science Department • Student Committee • Open to all colleges</div>
+      </aside>
+    </header>
+
+    <main class="sections">
+
+      <section class="panel" id="mission">
+        <h2>Mission & Vision</h2>
+        <p><strong>Mission:</strong> To create a hands-on platform where students can learn cutting-edge technology, collaborate on projects, and get exposure to industry experts. We focus on practical skills, teamwork, and exposure to career pathways.</p>
+        <p style="margin-top:8px"><strong>Vision:</strong> To become a regional hub that connects young innovators with mentors, startups, and industry partners — fostering a culture of continuous learning and entrepreneurship.</p>
+      </section>
+
+  
+
+      <section class="panel" id="tracks">
+        <h2>Tracks & Activities</h2>
+        <p>TechFest divides the program into focused tracks so participants can choose experiences that match their interests.</p>
+        <div class="tracks">
+          <article class="track"><h4>Hackathon</h4><p>48-hour team challenge: build, pitch, win cash prizes and incubation support.</p></article>
+          <article class="track"><h4>AI & ML</h4><p>Hands-on workshops, live demos, and mentorship in machine learning workflows.</p></article>
+          <article class="track"><h4>Web & Mobile</h4><p>Frontend, backend, and mobile development workshops and mini-project showcases.</p></article>
+          <article class="track"><h4>Design & UX</h4><p>Design sprints, prototyping sessions, and portfolio reviews by professionals.</p></article>
+          <article class="track"><h4>Robotics & IoT</h4><p>Hardware workshops, robot demos, and IoT competitions for makers.</p></article>
+          <article class="track"><h4>Startup Alley</h4><p>Pitching sessions and mentor clinics for early-stage startups and student founders.</p></article>
+        </div>
+      </section>
+
+      <section class="panel" id="speakers">
+        <h2>Speakers & Mentors</h2>
+        <p>We invite professors, startup founders, industry engineers, and designers to lead talks and workshops.</p>
+        <div class="speakers">
+          <div class="speaker"><img class="avatar" src="image/image7.webp" alt="Speaker"><h5>Dr. Asha Singh</h5><p>AI Researcher — Mentor</p></div>
+          <div class="speaker"><img class="avatar" src="image/image9.jpg" alt="Speaker"><h5>Mr. Vikram Patel</h5><p>Founder — Startup Mentor</p></div>
+          <div class="speaker"><img class="avatar" src="image/image8.avif" alt="Speaker"><h5>Ms. Neha Verma</h5><p>UX Lead — Workshop</p></div>
+          <div class="speaker"><img class="avatar" src="image/image10.jpg" alt="Speaker"><h5>Prof. Rajesh Kumar</h5><p>Systems Architect — Keynote</p></div>
+        </div>
+      </section>
+
+      <section class="panel" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <details class="faq"><summary>Who can attend?</summary><p>All students from colleges and universities are welcome — both individual participants and teams.</p></details>
+          <details class="faq"><summary>Is there an entry fee?</summary><p>Most workshops are free; certain paid workshops or competitions will have a small fee listed on the registration page.</p></details>
+          <details class="faq"><summary>How do I register?</summary><p>Use the registration form on the main landing page or the "Register" button in the nav. Teams should register together with one representative.</p></details>
+          <details class="faq"><summary>Are accommodation and travel provided?</summary><p>We provide a list of nearby hotels and limited on-campus accommodation on request. Travel support is not currently available.</p></details>
+        </div>
+      </section>
+
+      <section class="panel" id="sponsors">
+        <h2>Sponsors & Partners</h2>
+        <p>We partner with local and national organisations to support prizes, infrastructure, and mentorship.</p>
+        <div class="sponsors" style="margin-top:12px">
+          <div class="sponsor">TechCorp</div>
+          <div class="sponsor">CodeLabs</div>
+          <div class="sponsor">EduSpark</div>
+          <div class="sponsor">LocalBank</div>
+        </div>
+      </section>
+
+      <section class="panel" id="venue">
+        <h2>Venue & Logistics</h2>
+        <p>TechFest 2025 will be held on the MIT Meerut Engineering Campus. The venue includes auditoriums for keynotes, labs for workshops, and an open ground for exhibitions and cultural events.</p>
+        <div style="margin-top:12px" class="contact-grid">
+          <div class="contact-card">
+            <h4>How to reach</h4>
+            <p class="small">Nearest railway station: Meerut Junction (7 km). Nearest airport: Meerut (approx. 220 km). Local buses and autos are available from the station.</p>
+          </div>
+          <aside class="contact-card">
+            <h4>Day-wise Venue Map</h4>
+            <p class="small">Main auditorium (block B), Workshops (labs block F), Startup Alley (ground east), Food & Cultural (ground west).</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="panel" id="code-of-conduct">
+        <h2>Code of Conduct</h2>
+        <p>TechFest 2025 is committed to providing a harassment-free experience for everyone. Participants are expected to be respectful. Harassment or abusive behaviour will not be tolerated and may result in removal from the event.</p>
+        <p style="margin-top:8px">If you witness or experience any misconduct, please contact the event team immediately (contact details below). All reports will be handled confidentially.</p>
+      </section>
+
+      <section class="panel" id="contact">
+        <h2>Contact & Team</h2>
+        <p>For questions about registration, sponsorship, or media, reach out to:</p>
+        <div class="contact-grid" style="margin-top:12px">
+          <div class="contact-card">
+            <h4>Event Team</h4>
+            <p class="small">Email: info@techfest2025.com<br>Phone: +91 98765 XXXXX</p>
+          </div>
+          <aside class="contact-card">
+            <h4>Student Coordinators</h4>
+            <p class="small">Nitish (Lead) • Priya Sharma • Rohit Kumar<br>CS Dept., MIT Meerut Engineering Campus</p>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+    <footer style="margin-top:20px;text-align:center" class="small">© 2025 TechFest • Built by Student Committee • Follow us on social media for updates</footer>
+  </div>
+
+  <script>
+    // Small enhancement: open first FAQ by default for mobile readability
+    (function(){
+      const details = document.querySelectorAll('.faq');
+      if(details && details.length) details[0].setAttribute('open','');
+    })();
+  </script>
+</body>
+</html>
